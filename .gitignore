@@ -5,3 +5,4 @@ public/js/*
 public/css/*
 test/test.js
 test/fixtures.js
+.idea/

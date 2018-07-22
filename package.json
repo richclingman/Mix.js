@@ -12,7 +12,8 @@
   "scripts": {
     "install": "bower install",
     "test": "grunt",
-    "start": "grunt app"
+    "start": "grunt app",
+    "all": "grunt && grunt app"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

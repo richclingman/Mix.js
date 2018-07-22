@@ -4,7 +4,8 @@ module.exports = {
       'src/css/fonts.css',
       'src/css/normalize-edit.css',
       'src/css/main.css',
-      'src/css/loader.css'
+      'src/css/loader.css',
+      'src/css/override.css'
     ],
     dest: 'public/css/Mix.css'
   },

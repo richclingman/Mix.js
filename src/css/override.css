@@ -1,0 +1,43 @@
+
+/* * * * * * * *
+  Overrides for CSS for more responsive/phone use - Rich Clingman
+* * * * */
+
+.channel {
+    width: calc(100%/25);
+}
+
+.afl {
+    width: calc(100% - 4px);
+}
+
+.fader {
+    width:  calc(100% * 4);
+}
+
+.mute, .solo {
+    width: calc(50% - 0px);
+}
+
+p.label {
+    color: #c0c0c0;
+}
+
+button.btn {
+    color: #808080;
+}
+
+@media all and (max-width: 800px) {
+    header {
+        margin: 20px 0 15px;
+    }
+    #mixer {
+        min-width: 0;
+    }
+    #meters {
+        display: none;
+    }
+}
+
+
+
