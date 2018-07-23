@@ -79,7 +79,7 @@
     if ( ++App.loaded === App.tracks ) {
       App.ready = true;
       App.vent.trigger('ready');
-      top = App.util.scale( App.mix.get('gain'), 0, 1.5, 314, 0 );
+      top = App.util.scale( App.mix.get('gain'), 0, 1.5, 139, 0 );
       $('#master .fader').css( 'top', top + 'px' );
     }
   });
@@ -177,14 +177,14 @@
       state = App.dragState.y,
       delta = pos - state,
       css = App.dragState.px + delta;
-    css = Math.min( 314, css );
+    css = Math.min( 139, css );
     css = Math.max( 0, css );
     App.dragState.$target.css('top', css + 'px');
-    App.mix.set( 'gain', App.util.scale( css, 0, 314, 1.5, 0 ) );
+    App.mix.set( 'gain', App.util.scale( css, 0, 139, 1.5, 0 ) );
   };
 
   App.resetFader = function() {
-    var top = App.util.scale( 1, 0, 1.5, 314, 0 );
+    var top = App.util.scale( 1, 0, 1.5, 139, 0 );
     $('#master .fader').css( 'top', top + 'px' );
     App.mix.set( 'gain', 1 );
   };

@@ -67,7 +67,7 @@ App.module('Views', function( Views, App, Backbone, Marionette, $, _ ) {
 
     serializeData: function() {
       var data = this.model.toJSON();
-      data.gain = App.util.scale(Math.sqrt(data.gain), 0, 1.15, 220, 0);
+      data.gain = App.util.scale(Math.sqrt(data.gain), 0, 1.15, 88, 0);
       data.pan = App.util.scale(data.pan, -1, 1, -150, 150);
       data.muted = data.muted ? 'active' : '';
       data.soloed = data.soloed ? 'active' : '';
@@ -125,7 +125,7 @@ App.module('Views', function( Views, App, Backbone, Marionette, $, _ ) {
       css = Math.min(max, css);
       css = Math.max(0, css);
       this.dragState.$target.css('top', css + 'px');
-      this.model.set('gain', Math.pow(App.util.scale(css, 0, 220, 1.15, 0), 2));
+      this.model.set('gain', Math.pow(App.util.scale(css, 0, 88, 1.15, 0), 2));
     },
 
     dragPanner: function( ev ) {
@@ -146,14 +146,14 @@ App.module('Views', function( Views, App, Backbone, Marionette, $, _ ) {
 
     dragHandler: function( ev ) {
       if ( this.faderCanDrag ) {
-        this.dragFader(ev, 220);
+        this.dragFader(ev, 88);
       } else if ( this.pannerCanDrag ) {
         this.dragPanner(ev);
       }
     },
 
     resetFader: function() {
-      var top = App.util.scale(1, 0, 1.15, 220, 0);
+      var top = App.util.scale(1, 0, 1.15, 88, 0);
       this.$el.find('.fader').css('top', top + 'px');
       this.model.set('gain', 1);
     },
